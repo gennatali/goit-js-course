@@ -1,4 +1,4 @@
-'use strict'
+﻿'use strict'
 
 let input;
 const numbers = [];
@@ -7,21 +7,23 @@ let message;
 
 while (true) {
     input = prompt('enter numbers');
-    numbers.push(Number(input));
 
     if (input === null) break;
 
-    input = Number(input);
-    if (input !== Number(input)) {
+    if(input = Number(input)) {
+        numbers.push(input);
+    }
+
+    if (input = !Number(input)) {
         message = 'Было введено не число, попробуйте еще раз';
         alert(message);
-        numbers.splice(input);
     }
 }
 
 console.log(numbers);
 
 for (let key of numbers) {
+    input = Number(input);
     total = input += key;
 }
 
