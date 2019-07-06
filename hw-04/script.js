@@ -46,7 +46,7 @@ const notepad = {
     filterNotesByQuery(query) {
         let notesbyQuery = [];
         for (let key of this.notes) {
-            if (key.title.toLowerCase().includes(query.toLowerCase()) || key.body.toLowerCase().includes(query.toLowerCase)) {
+            if (key.title.toLowerCase().includes(query.toLowerCase()) || key.body.toLowerCase().includes(query.toLowerCase())) {
                 notesbyQuery.push(key);
             }
         }
