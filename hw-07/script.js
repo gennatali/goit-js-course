@@ -138,3 +138,4 @@ const getUsersByFriend = (users, name) => users.filter(el => el.friends.includes
 
 console.log('8 task:', getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log('8 task:', getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
