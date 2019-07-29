@@ -73,7 +73,6 @@ textarea {
 .note-list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column; /*мое*/
   align-items: stretch;
   list-style: none;
   padding: 0;
@@ -85,6 +84,7 @@ textarea {
   min-width: 320px;
   margin-left: 8px;
   margin-right: 8px;
+  margin-bottom: 40px; /*мое*/
 
 }
 

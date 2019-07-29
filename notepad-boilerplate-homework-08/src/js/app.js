@@ -171,7 +171,7 @@ const createNoteFooter = () => {
 
 const createListItem = ({id, title, body}) => {
   const listItem = document.createElement('li');
-  listItem.classList.add('note-list_item');
+  listItem.classList.add('note-list__item');
   listItem.dataset.id = id;
 
   const note = document.createElement('div');
