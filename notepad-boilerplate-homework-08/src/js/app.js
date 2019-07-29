@@ -158,7 +158,7 @@ const createNoteFooter = () => {
 
   const spanNote = document.createElement('span');
   spanNote.classList.add('note__priority');
-  spanNote.textContent = PRIORITY_TYPES.LOW;
+  spanNote.textContent = `Priority: ${PRIORITY_TYPES.LOW}`;
 
   noteSection1.append(createActionButton(NOTE_ACTIONS.DECREASE_PRIORITY, ICON_TYPES.ARROW_DOWN), createActionButton(NOTE_ACTIONS.INCREASE_PRIORITY, ICON_TYPES.ARROW_UP));
   noteSection1.appendChild(spanNote);

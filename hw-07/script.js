@@ -139,3 +139,31 @@ const getUsersByFriend = (users, name) => users.filter(el => el.friends.includes
 console.log('8 task:', getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log('8 task:', getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 
+// Additional task 1
+// Получить массив всех умений всех пользователей (поле skills), 
+// при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке
+
+const getUniqueSkills = users => {
+
+  const allSkills = users.reduce((acc, user) => {
+    acc.push(...user.skills);
+    return acc;
+  }, []);
+
+  const uniqueSkillsList = {};
+
+  allSkills.forEach(skill => uniqueSkillsList[skill] = true);
+
+  return Object.keys(uniqueSkillsList).sort();
+};
+
+console.log(getUniqueSkills(users));
+
+// Additional task 2
+// Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
+
+const getNamesSortedByFriendsCount = users => users
+.sort((a, b) => a.friends.length - b.friends.length)
+.map(user => user.name);
+
+console.log(getNamesSortedByFriendsCount(users));
