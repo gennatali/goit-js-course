@@ -36,5 +36,6 @@
   },
   "dependencies": {
     "shortid": "^2.2.14"
-  }
+  },
+  "keywords": []
 }

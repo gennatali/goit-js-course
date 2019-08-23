@@ -68,9 +68,13 @@ export const createListItem = ({id, title, body}) => {
     noteBody.textContent = body;
 
     note.appendChild(noteContent);
+    note.appendChild(createNoteFooter());
     noteContent.append(noteTitle, noteBody);
 
-    listItem.append(note, createNoteFooter());
+    listItem.append(note);
+
+    // listItem.append(note, createNoteFooter());
+
 
     return listItem;
 }
