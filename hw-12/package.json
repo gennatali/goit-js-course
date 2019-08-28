@@ -40,6 +40,5 @@
     "micromodal": "^0.4.0",
     "notyf": "^3.0.4",
     "shortid": "^2.2.14"
-  },
-  "keywords": []
+  }
 }
