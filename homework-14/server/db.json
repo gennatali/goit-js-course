@@ -1,0 +1,17 @@
+{
+  "notes": [
+    {
+      "id": "XWaQXcbk0",
+      "title": "JavaScript essentials",
+      "body": "Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc",
+      "priority": 0,
+      "function updatePost(_x3, _x4) {\n    return _ref4.apply(this, arguments);\n  }": ""
+    },
+    {
+      "title": "jhgjhg",
+      "body": "jhkjh",
+      "priority": 0,
+      "id": "Az6wvgz"
+    }
+  ]
+}
