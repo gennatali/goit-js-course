@@ -21,7 +21,7 @@ export const savePost = async (post) => {
     try {
        const response = await axios.post('', post);
        notyf.success(NOTIFICATION_MESSAGES.NOTE_ADDED_SUCCESS);
-       return response;
+       return response.data;
     }catch(error){
         throw error ('Error while fetching' + response.statusText);
     }
@@ -31,7 +31,7 @@ export const deletePost = async(id) => {
     try {
         const response = await axios.delete(`/${id}`);
         notyf.success(NOTIFICATION_MESSAGES.NOTE_DELETED_SUCCESS);
-        return response;
+        return response.data;
     }catch(error){
         notyf.error(NOTIFICATION_MESSAGES.SERVER_ERROR);
         throw error('Error while fetching ' + response.statusText);
@@ -42,7 +42,7 @@ export const deletePost = async(id) => {
 export const updatePost = async (id, updatedPost) => {
     try {
         const response = await axios.patch(`/${id}`, updatedPost);
-        return response;
+        return response.data;
     }catch(error){
         notyf.error(NOTIFICATION_MESSAGES.SERVER_ERROR);
         throw error('Error while fetching ' + response.statusText);

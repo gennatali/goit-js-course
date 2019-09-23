@@ -10,9 +10,16 @@ const notepad = new Notepad();
 const notyf = new Notyf();
 const refs = viewFn.refs();
 
-notepad.get().then(notes => {
-  viewFn.renderListItems(refs.list, notes);
-});
+
+(async() => {
+  try {
+    const notes = await notepad.get();
+    viewFn.renderListItems(refs.list, notes);
+    return notes;
+  }catch(error){
+    throw error;
+  }
+})();
 
 const handleOpenModal = () => {
   MicroModal.show('note-editor-modal');
